@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphApp", "GraphApp\GraphApp.csproj", "{EB52FF64-837C-4A4D-8A2A-D474819EEF72}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "SetupWizard\Setup\Setup.vdproj", "{E438AD81-C5EF-4128-8469-5A8D44AC91A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{EB52FF64-837C-4A4D-8A2A-D474819EEF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB52FF64-837C-4A4D-8A2A-D474819EEF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB52FF64-837C-4A4D-8A2A-D474819EEF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E438AD81-C5EF-4128-8469-5A8D44AC91A9}.Debug|Any CPU.ActiveCfg = Debug
+		{E438AD81-C5EF-4128-8469-5A8D44AC91A9}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
