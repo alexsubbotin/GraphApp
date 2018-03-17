@@ -90,7 +90,7 @@ namespace GraphApp
 
                 g.DrawEllipse(apPen, x, Convert.ToInt32(y1), 20, 20); // Нарисовали вершину
                 g.FillEllipse(apBrush, x, Convert.ToInt32(y1), 20, 20); // Залили вершину
-                g.DrawString((k + 1).ToString(), textFont, textBrush, x + 1, Convert.ToInt32(y1) + 1); // Вставили текст (номер вершины)
+                g.DrawString((k + 1).ToString(), textFont, textBrush, x + 4, Convert.ToInt32(y1) + 3); // Вставили текст (номер вершины)
                 apexPosArr[k] = new ApexPos(k, x, Convert.ToInt32(y1)); // Записали вершину в массив
                 k++;
                 if (k == numberOfApexes)
@@ -103,7 +103,7 @@ namespace GraphApp
 
                     g.DrawEllipse(apPen, x, Convert.ToInt32(y2), 20, 20); // Нарисовали вершину
                     g.FillEllipse(apBrush, x, Convert.ToInt32(y2), 20, 20); // Залили вершину
-                    g.DrawString((k + 1).ToString(), textFont, textBrush, x + 1, Convert.ToInt32(y2) + 1); // Вставили текст (номер вершины)
+                    g.DrawString((k + 1).ToString(), textFont, textBrush, x + 4, Convert.ToInt32(y2) + 3); // Вставили текст (номер вершины)
                     apexPosArr[k] = new ApexPos(k, x, Convert.ToInt32(y2)); // Записали вершину в массив
                     k++;
                     if (k == numberOfApexes)
@@ -209,7 +209,7 @@ namespace GraphApp
 
                     g.DrawEllipse(apPen, X, Y, 20, 20); // Нарисовали вершину
                     g.FillEllipse(apBrush, X, Y, 20, 20); // Залили вершину
-                    g.DrawString(apNames[j], textFont, textBrush, X + 1, Y + 1); // Вставили название вершины
+                    g.DrawString(apNames[j], textFont, textBrush, X + 4, Y + 3); // Вставили название вершины
 
                     apexPosArr[Convert.ToInt32(apNames[j]) - 1] = new ApexPos(Convert.ToInt32(apNames[j]), X, Y); // Записали вершину в массив
                 }
@@ -276,30 +276,6 @@ namespace GraphApp
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             ParallelPicBox.Refresh();
-
-            //while (true)
-            //{
-            //    ParallelPicBox.Refresh();
-            //    System.Threading.Thread.Sleep(492); // Let's go to the mall
-            //}
-
-            //while (true)
-            //{
-            //    ParallelPicBox.Refresh();
-            //    System.Threading.Thread.Sleep(473); // Hash Pipe
-            //}
-
-            //while (true)
-            //{
-            //    ParallelPicBox.Refresh();
-            //    System.Threading.Thread.Sleep(443); // Паки пуси
-            //}
-
-            //while (true)
-            //{
-            //    ParallelPicBox.Refresh();
-            //    System.Threading.Thread.Sleep(413); // Опеннинг Врата Штейна
-            //}
         }
 
         private void ShowGraphForm_FormClosed(object sender, FormClosedEventArgs e)
