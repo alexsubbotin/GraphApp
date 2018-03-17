@@ -56,25 +56,32 @@ namespace GraphApp
         {
             bool ok = true;
 
-            if (Convert.ToInt32(NumOfApTextBox.Text) < 2)
+            try
             {
-                MessageBox.Show("Вы ввели слишком маленькое число! \nНа вход может приниматься от 2 до 9 вершин", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ok = false;
-            }
+                if (Convert.ToInt32(NumOfApTextBox.Text) < 2)
+                {
+                    MessageBox.Show("Вы ввели слишком маленькое число! \nНа вход может приниматься от 2 до 9 вершин", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ok = false;
+                }
 
-            if (Convert.ToInt32(NumOfApTextBox.Text) > 9)
-            {
-                MessageBox.Show("Вы ввели слишком большое число! \nНа вход может приниматься от 2 до 9 вершин", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ok = false;
-            }
+                if (Convert.ToInt32(NumOfApTextBox.Text) > 9)
+                {
+                    MessageBox.Show("Вы ввели слишком большое число! \nНа вход может приниматься от 2 до 9 вершин", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ok = false;
+                }
 
-            if (ok)
+                if (ok)
+                {
+                    MatrixForm matrixForm = new MatrixForm();
+                    matrixForm.Owner = this; // Сделали форму матрицы подчиненной этой
+                    matrixForm.numberOfApexes = Convert.ToInt32(NumOfApTextBox.Text); // Передали кол-во вершин
+                    matrixForm.Show();
+                    Hide();
+                }
+            }
+            catch
             {
-                MatrixForm matrixForm = new MatrixForm();
-                matrixForm.Owner = this; // Сделали форму матрицы подчиненной этой
-                matrixForm.numberOfApexes = Convert.ToInt32(NumOfApTextBox.Text); // Передали кол-во вершин
-                matrixForm.Show();
-                Hide();
+                MessageBox.Show("Ошибка ввода! \nНа вход может приниматься от 2 до 9 вершин", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

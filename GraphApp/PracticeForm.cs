@@ -446,7 +446,7 @@ namespace GraphApp
 
                 g.DrawEllipse(apPen, x, Convert.ToInt32(y1), 20, 20); // Нарисовали вершину
                 g.FillEllipse(apBrush, x, Convert.ToInt32(y1), 20, 20); // Залили вершину
-                g.DrawString((k + 1).ToString(), textFont, textBrush, x + 1, Convert.ToInt32(y1) + 1); // Вставили текст (номер вершины)
+                g.DrawString((k + 1).ToString(), textFont, textBrush, x + 4, Convert.ToInt32(y1) + 3); // Вставили текст (номер вершины)
                 apexPosArr[k] = new ApexPos(k, x, Convert.ToInt32(y1)); // Записали вершину в массив
                 k++;
                 if (k == numberOfApexes)
@@ -459,7 +459,7 @@ namespace GraphApp
 
                     g.DrawEllipse(apPen, x, Convert.ToInt32(y2), 20, 20); // Нарисовали вершину
                     g.FillEllipse(apBrush, x, Convert.ToInt32(y2), 20, 20); // Залили вершину
-                    g.DrawString((k + 1).ToString(), textFont, textBrush, x + 3, Convert.ToInt32(y2) + 4); // Вставили текст (номер вершины)
+                    g.DrawString((k + 1).ToString(), textFont, textBrush, x + 4, Convert.ToInt32(y2) + 3); // Вставили текст (номер вершины)
                     apexPosArr[k] = new ApexPos(k, x, Convert.ToInt32(y2)); // Записали вершину в массив
                     k++;
                     if (k == numberOfApexes)
