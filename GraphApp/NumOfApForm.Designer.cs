@@ -95,6 +95,8 @@
             this.Controls.Add(this.NumOfApTextBox);
             this.Controls.Add(this.NumOfApLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(474, 215);
+            this.MinimumSize = new System.Drawing.Size(474, 215);
             this.Name = "NumOfApForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Кол-во вершин";

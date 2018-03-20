@@ -118,7 +118,6 @@
             this.AcceptButton = this.OKButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(571, 220);
             this.ControlBox = false;
             this.Controls.Add(this.CancelButton);
@@ -128,6 +127,8 @@
             this.Controls.Add(this.EasyCheckBox);
             this.Controls.Add(this.ChooseLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(589, 267);
+            this.MinimumSize = new System.Drawing.Size(589, 267);
             this.Name = "PracticeChooseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Уровень сложности";

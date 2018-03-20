@@ -118,6 +118,8 @@
             this.Controls.Add(this.MatrixDGV);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(896, 548);
+            this.MinimumSize = new System.Drawing.Size(896, 548);
             this.Name = "MatrixForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Матрица смежности";

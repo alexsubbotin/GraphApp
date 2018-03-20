@@ -424,6 +424,8 @@
             this.Controls.Add(this.GoToMenuButton);
             this.Controls.Add(this.PracticePicBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1505, 889);
+            this.MinimumSize = new System.Drawing.Size(1505, 889);
             this.Name = "PracticeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Практика";

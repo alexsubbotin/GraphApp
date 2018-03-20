@@ -146,6 +146,8 @@
             this.Controls.Add(this.ParallelPicBox);
             this.Controls.Add(this.CasualPicBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1478, 878);
+            this.MinimumSize = new System.Drawing.Size(1478, 878);
             this.Name = "ShowGraphForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Показ графа";

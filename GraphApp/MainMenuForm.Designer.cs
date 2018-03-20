@@ -95,6 +95,8 @@
             this.Controls.Add(this.WorkButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1007, 558);
+            this.MinimumSize = new System.Drawing.Size(1007, 558);
             this.Name = "MainMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приведение графа к ЯПФ";
