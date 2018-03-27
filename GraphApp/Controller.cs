@@ -41,31 +41,7 @@ namespace GraphApp
 
             while (k > 0) // Пока не все вершины записаны
             {
-                for (int j = 0; j < adjMatrix.GetLength(1); j++) // Идем по столбцам
-                {
-                    if (!floors.Contains((j + 1).ToString()) && !lastFloor.Contains((j + 1).ToString())) // Если столбец не удален (не записан)
-                    {
-                        bool no1InColumn = true; // Флажок, говорящий об отсуствии единицы в столбце
-
-                        for (int i = 0; i < adjMatrix.GetLength(0); i++) // Идем по ячейкам столбца
-                        {
-                            if (!floors.Contains((i + 1).ToString()) && !lastFloor.Contains((i + 1).ToString())) // Если строка не удалена
-                            {
-                                if (adjMatrix[i, j])
-                                {
-                                    no1InColumn = false; // Опустили флажок, единица нашлась
-                                    break;
-                                }
-                            }
-                        }
-
-                        if (no1InColumn) // Если единиц в столбце не было
-                        {
-                            buf += (j + 1) + "&"; // Записали вершину
-                            k--; // Уменьшили кол-во оставшихся вершин на 1
-                        }
-                    }
-                }
+                SearchZeroColumn(adjMatrix, floors, lastFloor, ref buf, ref k); // Поиск нулевых столбцов
 
                 floors += buf + " "; // Записали в ярус найденные вершины
                 buf = "";
@@ -76,6 +52,35 @@ namespace GraphApp
             //floorsArr = Mas(floorsArr);
 
             return floorsArr;
+        }
+
+        public static void SearchZeroColumn(bool[,] adjMatrix, string floors, string lastFloor, ref string buf, ref int k) // Поиск нулевых столбцов
+        {
+            for (int j = 0; j < adjMatrix.GetLength(1); j++) // Идем по столбцам
+            {
+                if (!floors.Contains((j + 1).ToString()) && !lastFloor.Contains((j + 1).ToString())) // Если столбец не удален (не записан)
+                {
+                    bool no1InColumn = true; // Флажок, говорящий об отсуствии единицы в столбце
+
+                    for (int i = 0; i < adjMatrix.GetLength(0); i++) // Идем по ячейкам столбца
+                    {
+                        if (!floors.Contains((i + 1).ToString()) && !lastFloor.Contains((i + 1).ToString())) // Если строка не удалена
+                        {
+                            if (adjMatrix[i, j])
+                            {
+                                no1InColumn = false; // Опустили флажок, единица нашлась
+                                break;
+                            }
+                        }
+                    }
+
+                    if (no1InColumn) // Если единиц в столбце не было
+                    {
+                        buf += (j + 1) + "&"; // Записали вершину
+                        k--; // Уменьшили кол-во оставшихся вершин на 1
+                    }
+                }
+            }
         }
 
         public static string[] Mas(string[] arr) // Запись массива без пустого последнего элемента
