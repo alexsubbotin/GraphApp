@@ -39,6 +39,7 @@ namespace GraphApp
             {
                 MatrixDGV.Columns[i].HeaderText = Convert.ToString(i + 1); // Названия столбцов
                 MatrixDGV.Columns[i].Width = 390/numberOfApexes; // Ширина столбцов
+                MatrixDGV.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable; // Нельзя сортировать
 
                 MatrixDGV.Rows[i].HeaderCell.Value = Convert.ToString(i + 1); // Название строк
                 MatrixDGV.Rows[i].Height = 310/numberOfApexes; // Высота строки
